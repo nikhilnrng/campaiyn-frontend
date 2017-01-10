@@ -1,0 +1,49 @@
+@header-height: 72px;
+.header {
+  height: @header-height;
+  line-height: @header-height;
+  background: rgba(0,0,0,0);
+  top: 0;
+  left: 0;
+  right: 0;
+  .container {
+    height: 100%;
+    background: rgba(0,0,0,0);
+    .logo-container {
+      float: left;
+      height: 100%;
+      .logo {
+        max-height: @header-height;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 8px;
+      }
+      .name {
+        display: inline-block;
+        svg {
+          vertical-align: middle;
+        }
+      }
+    }
+    .menu-buttons {
+      height: 100%;
+      float: right;
+      text-transform: uppercase;
+      margin-right: 24px;
+      font-weight: bold;
+      .menu-button {
+        height: 100%;
+        display: inline-block;
+        padding-left: 12px;
+        padding-right: 12px;
+        transition: background-color .1s ease-in-out;
+        -moz-transition: background-color .1s ease-in-out;
+        -webkit-transition: background-color .1s ease-in-out;
+        &:hover {
+          background-color: fade(@light-grey-1, 50%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

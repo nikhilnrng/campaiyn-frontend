@@ -1,0 +1,45 @@
+@font-family: "Raleway", sans-serif;
+
+h1, h2, h3, textarea, button {
+	font-weight: bold;
+}
+
+h1, h2, p, a {
+  text-align: center;
+}
+
+html, body {
+	font-family: @font-family;
+	font-weight: normal;
+	height: 100%;
+	margin: 0; 
+	padding: 0; 
+}
+
+input {
+	font-family: @font-family;
+	font-weight: normal;	
+}
+
+// Default selection highlight colors
+::selection {
+	color: @white;
+	background: @campaiyn-accent1;
+}
+::-moz-selection {
+	color: @white;
+	background: @campaiyn-accent1;
+}
+
+// Default link colors
+a {
+	color: @link-default;
+	text-decoration: none;
+	&:hover, &:focus {
+		color: @link-hover;
+		text-decoration: underline;
+	}
+	&:visited {
+		color: @link-visited;
+	}
+}

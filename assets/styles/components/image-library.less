@@ -1,0 +1,74 @@
+.image-library {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.image-library .image-library-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+}
+
+.image-library .image-library-container {
+  position: absolute;
+  height: 80%;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-library img {
+  position: absolute;
+  max-height: 100%;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-user-select: none;   
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+}
+
+.image-library .icon {
+  fill: @obj-middle-grey;
+  transition: fill .2s ease;
+}
+
+.image-library .close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.image-library .close:hover .icon {
+  fill: @obj-dark-grey;
+}
+
+.image-library .right {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  cursor: pointer;
+}
+
+.image-library .right:hover .icon {
+  fill: @obj-dark-grey;
+}
+
+.image-library .left {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  cursor: pointer;
+}
+
+.image-library .left:hover .icon {
+  fill: @obj-dark-grey;
+}

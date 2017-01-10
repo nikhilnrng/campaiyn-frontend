@@ -1,0 +1,100 @@
+@avatar-size: 36px;
+@messenger-window-bg-color: @campaiyn-accent3;
+@current-user-bg-color: @campaiyn-primary;
+@current-user-text-color: @white;
+@other-user-bg-color: @campaiyn-accent2;
+@other-user-text-color: @campaiyn-tertiary;
+.messenger-window {
+  background-color: @messenger-window-bg-color;
+  height: 100%;
+  width: 100%;
+  .messenger-messages-container {
+    overflow-y: auto;
+    height: 100%;
+    max-height: 100%;
+    .messenger-messages-group-container {
+      margin: 15px 0;
+      .messenger-messages-group-user-avatar {
+        position: relative;
+        width: 100%;
+        img {
+          width: @avatar-size;
+          height: @avatar-size;
+          max-width: @avatar-size;
+          max-height: @avatar-size;
+          object-fit: cover;
+          border-radius: 50%;
+          position: absolute;
+          background-color: @obj-middle-grey;
+          -moz-user-select: -moz-none;
+          -khtml-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          &.messenger-messages-group-right {
+            top: 2px;
+            right: 12px;
+          }
+          &.messenger-messages-group-left {
+            top: 2px;
+            left: 12px;
+          }
+        }
+      }
+      .messenger-messages-group {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        &.messenger-messages-group-right {
+          padding-right: 62px;
+        }
+        &.messenger-messages-group-left {
+          padding-left: 62px;
+        }
+        .messenger-message-container {
+          width: 100%;
+          height: auto;
+          .messenger-message {
+            &:after {
+              content: " ";
+              display: block;
+              height: 0;
+              clear: both;
+            }
+            .messenger-message-box {
+              display: inline-block; /* size width to content width */
+              max-width: 60%;
+              min-height: 22px;
+              padding: 6px 12px;
+              margin: 3px 0;
+              height: auto;
+              &.messenger-message-box-right {
+                background-color: @current-user-bg-color;
+                color: @current-user-text-color;
+                float: right;
+                clear: right;
+              }
+              &.messenger-message-box-left {
+                background-color: @other-user-bg-color;
+                color: @other-user-text-color;
+                float: left;
+                clear: left;
+              }
+              .messenger-message-text {        
+                p {
+                  margin: 0;
+                  min-height: 20px;
+                  display: inline-block; /* size width to content width */
+                  text-align: left;
+                  font-family: @roboto;
+                  font-weight: 300;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

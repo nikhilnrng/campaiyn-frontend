@@ -1,0 +1,230 @@
+.view-listing h1 {
+  font-weight: 400;
+  text-align: left;
+}
+
+.view-listing h2 {
+  font-weight: 300;
+  text-align: left;
+}
+
+.view-listing h3,
+.view-listing p {
+  font-weight: 100;
+  text-align: left;
+}
+
+/* 
+ * Cover Photo
+ */
+
+.view-listing .cover-photo {
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.view-listing .cover-photo .content-container {
+  width: 70%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.view-listing .cover-photo .content-container #listing-details {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 25px 0;
+}
+
+.view-listing .cover-photo .content-container #button-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 30px 0;
+  min-width: 240px;
+}
+
+.view-listing .cover-photo .photo-container {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+.view-listing .cover-photo .photo-container img {
+  flex-shrink:0;
+  min-width:100%;
+  min-height:100%;  
+  background-color: @obj-light-grey;
+}
+
+.view-listing .cover-photo .cover-photo-overlay {
+  z-index: 2;
+  background-image: linear-gradient(rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8) 90%);
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+}
+
+.view-listing .cover-photo .content-container h1 {
+  color: white;
+  margin: 0;
+  font-size: 2em;
+}
+
+.view-listing .cover-photo .content-container h3 {
+  color: white;
+  margin: 0;
+  font-size: 1em;
+}
+
+/* 
+ * Description
+ */
+
+.view-listing .description h1 {
+  color: black;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.view-listing .description h2 {
+  color: black;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+.view-listing .description p {
+  color: black;
+  font-weight: 100;
+  font-size: 1em;
+  word-break: break-all;
+}
+
+.view-listing .description .content-container {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 30px; /* _getDimensions dependancy */
+  padding-bottom: 40px;
+}
+
+.view-listing .description .content-container #body {
+  width: 65%;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 30px; /* _getDimensions dependancy */
+}
+
+.view-listing .description .content-container #sidebar {
+  width: 35%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.view-listing .description .content-container #map {
+  width: 100%;
+  height: 500px;
+}
+
+.view-listing .description .user-profile-card-container {
+  vertical-align: bottom;
+  width: 100%;
+  padding-left: 50px;
+}
+
+.view-listing .description .user-profile-card h1 {
+  text-align: center;
+}
+
+.view-listing .description .user-profile-card h2 {
+  text-align: center;
+  font-weight: 300;
+}
+
+.view-listing .description .user-profile-card p {
+  text-align: center;
+  font-weight: 100;
+  font-size: 0.9em;
+  padding: 0 20%;
+}
+
+.view-listing .image-icon-display {
+  width: 100%;
+}
+
+.view-listing .image-icon-display .image-icon-display-container {
+  height: 250px;
+  width: 100%;
+}
+
+.view-listing .image-icon-display .image-icon-display-container > div {
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  vertical-align: top;
+}
+
+.view-listing .image-icon-display .image-col {
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  vertical-align: top;
+}
+
+.view-listing .image-icon-display .image-icon {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+.view-listing .image-icon-display .main-image-icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.view-listing .image-icon-display .image-container {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  left: 2px;
+  bottom: 2px;
+}
+
+.view-listing .image-icon-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.view-listing .image-icon-display .overflow-overlay {
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index:1;
+}
+
+.view-listing .image-icon-display .overflow-overlay h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  color: white;
+  font-weight: 200;
+  font-size: 2.5em;
+}
+
+.view-listing .image-icon-display a {
+  cursor: pointer;
+}

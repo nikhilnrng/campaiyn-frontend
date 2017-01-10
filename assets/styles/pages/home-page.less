@@ -1,0 +1,88 @@
+.home {
+  @panel-left-bg-color: @campaiyn-primary;
+  @panel-right-bg-color: @white;
+  width: 100%;
+  height: 100vh;
+  font-weight: bold;
+  .home-panel {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    height: 100%;
+    h1 {
+        text-transform: uppercase;
+        cursor: default;
+    }
+    p {
+      width: 50%;
+      margin: auto;
+      cursor: default;
+    }
+    & > div {
+      text-align: center;
+    }
+    &#home-panel-left {
+      background-color: @panel-left-bg-color;
+      h1 {
+        color: @white;
+      }
+      p {
+        color: @campaiyn-tertiary;
+      }
+    }
+    &#home-panel-right {
+      background-color: @panel-right-bg-color;
+      h1 {
+        color: @campaiyn-tertiary;
+      }
+      p {
+        color: @campaiyn-primary;
+      }
+    }
+    .home-panel-content {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      & > div {
+        align-self: center;
+      }
+    }
+  }
+  .home-help-flag {
+    .disable-text-highlight();
+    @flag-color: @campaiyn-accent1;
+    @flag-label-color: @orange-brown;
+    @flag-height: 42px;
+    @flag-width: 256px;
+    position: absolute;
+    height: @flag-height;
+    width: @flag-width;
+    right: 0px;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    background-color: @flag-color;
+    &:before {
+      position: relative;
+      height: 100%;
+      display: inline-block;
+    }
+    &:after { // makes the ribbon look of the flag
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-top: @flag-height/2 solid transparent;
+      border-bottom: @flag-height/2 solid transparent;
+      border-left: @flag-height solid @panel-right-bg-color;
+    }
+    .home-help-flag-label {
+      align-self: center;
+      color: @flag-label-color;
+      text-transform: uppercase;
+    }
+  }
+}

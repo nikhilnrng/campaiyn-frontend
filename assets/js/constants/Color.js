@@ -1,0 +1,29 @@
+/**
+ * A container for all colors and their definitions used throughout the Campaiyn application.
+ */
+const Color = {
+  // Function level definitions
+  CAMPAIYN_PRIMARY: '#FAB019',
+  CAMPAIYN_PRIMARY_DARK: '#E09F17',
+  CAMPAIYN_SECONDARY: '#F9F4A7',
+  CAMPAIYN_SECONDARY_DARK: '#DCD996',
+  CAMPAIYN_TERTIARY: '#886F2B',
+  CAMPAIYN_TERTIARY_DARK: '#6E5B20',
+  CAMPAIYN_ACCENT1: '#B4DFCF',
+  CAMPAIYN_ACCENT1_DARK: '#8AADA3',
+  CAMPAIYN_ACCENT2: '#FFDB9F',
+  ORANGE_BROWN: '#C49C2D',
+  ORANGE_LIGHT1: '#FCDB78',
+  ORANGE_LIGHT2: '#FCF8D2',
+  SUCCESS_PRIMARY: '#0ECB0E',
+  SUCCESS_SECONDARY: '#00A300',
+  FAILURE_PRIMARY: '#FE1212',
+  FAILURE_SECONDARY: '#CC0000',
+
+  // Clear-cut definitions
+  WHITE: '#FFFFFF',
+  GRAY_LIGHT: '#D3D3D3',
+  GRAY_DARK: '#767676'
+};
+
+export default Color;
